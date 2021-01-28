@@ -30,6 +30,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
     Plug 'tpope/vim-sensible'
     Plug 'lervag/vimtex'
+    Plug 'SirVer/ultisnips'
+    Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
+    Plug 'mlr-msft/vim-loves-dafny', {'for': 'dafny'}
+    Plug 'supercollider/scvim'
 call plug#end()
 
 
@@ -59,12 +63,26 @@ set statusline+=\ %3l:%-2c\         " line + column
 set statusline+=%#Cursor#       " colour
 set statusline+=\ %3p%%\                " percentage
 
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
+
 set conceallevel=1
 let g:tex_conceal='abdmg'
+hi Conceal ctermfg=109 guifg=#ffffff ctermbg=NONE guibg=NONE
+
+let mapleader=","
+let g:syntastic_mode_map = {
+        \ "mode": "active",
+        \ "passive_filetypes": ["dafny"] }
+noremap <Leader>c :w<CR>:SyntasticCheck<CR>
+let g:scFlash = 1
+
+
 " Keybindings
 map <Space> <C-W>
 map <C-n> :NERDTreeToggle<CR>
