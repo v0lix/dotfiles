@@ -21,7 +21,6 @@ set termguicolors
 set scrolloff=8
 set noshowmode
 set completeopt=menuone,noinsert,noselect
-colorscheme dw_purple
 hi Normal guibg=NONE ctermbg=NONE
 
 " List of plugins.
@@ -33,7 +32,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'SirVer/ultisnips'
     Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
     Plug 'mlr-msft/vim-loves-dafny', {'for': 'dafny'}
-    Plug 'supercollider/scvim'
 call plug#end()
 
 

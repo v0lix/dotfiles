@@ -1,9 +1,11 @@
 # dotfiles
 Configuration files
 
-- OS: ArcoLinux
+- OS: Arch Linux
+- WM: Xmonad
+- Status bar: Xmobar
 - Terminal: Kitty
-- Pdf viewer: Zathura
+- PDF viewer: Zathura
 - Shell: Zsh
-- Theme: Oh-My-Zsh daveverwer
+- File manager: Ranger
 - Text editor: Vim
